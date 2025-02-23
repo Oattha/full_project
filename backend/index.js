@@ -10,9 +10,12 @@ const app = express();
 // ใช้ JSON parsing
 app.use(express.json());
 
+
 // ตั้งค่าการอนุญาตจากแหล่งที่มาหลายแหล่ง
+
+
 app.use(cors({
-    origin: ['https://yourdomain.com'], // ตั้งค่า origin ให้ชัดเจน
+    origin: '*', // อนุญาตทุกโดเมนเข้าถึง
     credentials: true
 }));
 
